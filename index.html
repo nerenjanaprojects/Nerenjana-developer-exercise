@@ -1,32 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.D. James Construction</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#e8622a',
+          'brand-dark': '#af3315',
+          'site-dark': '#1a2530',
+          'site-mid': '#1e2b35',
+          'sidebar-gray': '#5e656b',
+        },
+        letterSpacing: {
+          widest2: '0.3em',
+          widest3: '0.4em',
+        }
+      }
+    }
+  }
+</script>
 </head>
+<body class="bg-site-dark text-white font-sans m-0 p-0">
 
-<body class="bg-gray-100 text-gray-800">
+<!-- ══════════ FIXED LEFT SIDEBAR ══════════ -->
+<div class="fixed left-0 top-0 z-50 flex flex-col gap-1 pt-20">
+  <div class="w-[45px] h-[50px] bg-sidebar-gray flex items-center justify-center cursor-pointer">
+    <img src="images/houseIcon.svg" class="w-6 h-6">
+  </div>
+  <div class="w-[45px] h-[50px] bg-sidebar-gray flex items-center justify-center cursor-pointer">
+    <img src="images/starIcon.svg" class="w-6 h-6">
+  </div>
+  <div class="w-[45px] h-[50px] bg-sidebar-gray flex items-center justify-center cursor-pointer">
+    <img src="images/infoI.svg" class="w-2 h-6">
+  </div>
+  <div class="w-[145px] h-[50px] bg-brand-dark flex items-center justify-center gap-2 cursor-pointer">
+    <span class="text-xs font-bold tracking-[0.2em]">CONTACT</span>
+    <img src="images/mailIcon.svg" class="w-5 h-4">
+  </div>
+  <div class="h-4"></div>
+  <div class="w-[45px] h-[43px] bg-[#3b5998] flex items-center justify-center cursor-pointer">
+    <img src="images/facebookF.svg" class="w-4">
+  </div>
+  <div class="w-[45px] h-[43px] bg-[#1da1f2] flex items-center justify-center cursor-pointer">
+    <img src="images/twitterLogo.svg" class="w-5">
+  </div>
+  <div class="w-[45px] h-[43px] bg-[#dd4b39] flex items-center justify-center cursor-pointer">
+    <img src="images/googlePlus.svg" class="w-5">
+  </div>
+</div>
 
-    <header class="bg-white shadow">
-        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-            <div class="text-xl font-bold">Logo</div>
+<!-- ══════════ HERO ══════════ -->
+<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center"
+  style="background-image: url('images/constructBg.jpg');">
+  <div class="absolute inset-0 bg-black/62"></div>
+  <div class="relative z-10 flex flex-col items-center px-6">
+    <img src="images/redStarLogo.svg" class="w-36 h-32 mb-4">
+    <h1 class="text-4xl md:text-5xl font-black uppercase tracking-[0.25em]">J.D. JAMES CONSTRUCTION</h1>
+    <p class="mt-2 text-sm tracking-[0.4em] text-gray-300 uppercase">Concrete Contractor</p>
+    <p class="mt-10 text-4xl font-black text-brand">609.864.3888</p>
+    <button class="mt-4 px-8 py-3 border border-white bg-[#1e3040] text-xs tracking-[0.25em] hover:bg-white hover:text-black transition-colors">
+      LET'S GET STARTED
+    </button>
+  </div>
+</section>
 
-            <nav class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-blue-500">Home</a>
-                <a href="#" class="hover:text-blue-500">About</a>
-                <a href="#" class="hover:text-blue-500">Services</a>
-                <a href="#" class="hover:text-blue-500">Contact</a>
-            </nav>
+<!-- ══════════ QUOTE ══════════ -->
+<section class="relative bg-brand-dark py-14 px-20 text-center overflow-hidden">
+  <span class="absolute left-5 top-2 text-[120px] leading-none text-[#8b2510] select-none">"</span>
+  <span class="absolute right-5 bottom-0 text-[120px] leading-none text-[#8b2510] select-none">"</span>
+  <p class="text-lg tracking-[0.3em] uppercase">FROM BEGINNING TO END,</p>
+  <h2 class="text-3xl md:text-4xl font-black uppercase mt-2">WE NEVER COMPROMISE ON QUALITY.</h2>
+  <p class="mt-4 text-sm tracking-[0.2em]">– JD JAMES</p>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="bg-site-mid py-12 px-10">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="flex items-end gap-0 mb-5">
+      <h2 class="text-5xl font-black text-brand pr-6">PROJECTS</h2>
+      <div class="border-l-2 border-[#4a5a68] pl-6">
+        <p class="text-[10px] tracking-[0.3em] text-gray-400 uppercase">Serving</p>
+        <p class="text-2xl font-black tracking-wide uppercase">MEDFORD &amp; SOUTH JERSEY</p>
+        <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">
+          FOR OVER <span class="text-white font-black text-lg">25 YEARS</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-1">
+      <!-- Info card -->
+      <div class="bg-brand-dark p-4">
+        <p class="font-bold text-xs leading-snug mb-2">black and pewter gray paver sidewalk</p>
+        <p class="text-[11px] text-orange-200 leading-relaxed">
+          Brick paver sidewalk ● Brick paver border ● Sealed brick pavers ● Marlton brick pavers ● EP Henry pavers
+        </p>
+        <a href="#" class="text-[11px] underline text-orange-300 mt-2 block">view</a>
+      </div>
+      <img src="images/sidewalk2.jpg" class="w-full h-44 object-cover">
+      <img src="images/sidewalk3.jpg" class="w-full h-44 object-cover">
+      <img src="images/sidewalk4.jpg" class="w-full h-44 object-cover">
+
+      <img src="images/sidewalk5.jpg" class="w-full h-44 object-cover">
+      <img src="images/sidewalk6.jpg" class="w-full h-44 object-cover">
+      <img src="images/sidewalk7.jpg" class="w-full h-44 object-cover">
+      <img src="images/sidewalk8.jpg" class="w-full h-44 object-cover">
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="py-14 px-10 bg-cover bg-center" style="background-image: url('images/grittyBg.jpg');">
+  <div class="max-w-5xl mx-auto flex gap-10 items-start">
+
+    <!-- Left col -->
+    <div class="w-64 flex-shrink-0">
+      <img src="images/owner.png" class="w-full object-cover">
+      <div class="mt-6 text-right">
+        <p class="text-[10px] tracking-[0.25em] text-gray-400 uppercase">Call Us For A Quote</p>
+        <p class="text-3xl font-black text-brand">609.864.3888</p>
+        <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">Start Your Next Project Today</p>
+      </div>
+    </div>
+
+    <!-- Right col -->
+    <div class="flex-1">
+      <h2 class="text-5xl font-black text-brand mb-4">ABOUT</h2>
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        A premier provider of concrete services for the entire Medford and South Jersey area. Dedicated to customer satisfaction from start to finish as well as quality workmanship at reasonable prices. Preforming concrete projects in: Medford, Cherry Hill, Marlton, Haddonfield, Moorestown, Mt. Laurel, Voorhees and surrounding areas.
+      </p>
+
+      <p class="text-xs font-bold tracking-[0.25em] text-brand uppercase mb-3">SERVICES INCLUDE:</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1 mb-8">
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete driveways</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete steps</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete patios</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete pool decks</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete sidewalks</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">exotic concrete finishes</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete floors</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">hardscaping</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">EP Henry brick pavers</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">power washing</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">EP Henry retaining walls</p>
+        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete restoration and repairs</p>
+      </div>
+
+      <p class="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-3">WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-gray-300">
+        <p>prompt courteous reliable service</p>
+        <p>restoration and repair services</p>
+        <p>reasonable prices</p>
+        <p>personalized service to meet your needs</p>
+        <p>no project too big or small</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="py-14 px-10 bg-cover bg-center" style="background-image: url('images/mapBg.jpg');">
+  <div class="max-w-5xl mx-auto flex gap-16 items-start">
+
+    <!-- Form -->
+    <div class="w-80 flex-shrink-0">
+      <h2 class="text-3xl font-black uppercase mb-6">CONTACT US</h2>
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <label class="w-16 text-right text-xs text-gray-400">name</label>
+          <input type="text" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
         </div>
-    </header>
+        <div class="flex items-center gap-3">
+          <label class="w-16 text-right text-xs text-gray-400">email</label>
+          <input type="email" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
+        </div>
+        <div class="flex items-center gap-3">
+          <label class="w-16 text-right text-xs text-gray-400">phone</label>
+          <input type="tel" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
+        </div>
+        <div class="flex items-start gap-3">
+          <label class="w-16 text-right text-xs text-gray-400 pt-2">message</label>
+          <textarea rows="5" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none resize-none"></textarea>
+        </div>
+        <div class="pl-[76px]">
+          <button class="bg-brand-dark text-white text-xs font-bold tracking-[0.25em] px-8 py-3 hover:bg-brand transition-colors">
+            SEND
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <section class="bg-blue-600 text-white text-center py-20">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Homepage</h1>
-        <p class="text-lg md:text-xl">Hello</p>
-    </section>
+    <!-- Map info -->
+    <div class="flex-1 flex flex-col items-center justify-center text-center pt-10">
+      <p class="text-sm font-bold tracking-[0.25em] uppercase">J.D. JAMES CONSTRUCTION</p>
+      <p class="text-xs text-gray-400 tracking-[0.2em] uppercase mt-1">MEDFORD N.J. 08055</p>
+      <img src="images/mapPin.svg" class="w-10 h-12 my-5">
+      <p class="text-5xl font-black text-brand">609.864.3888</p>
+      <p class="text-[10px] tracking-[0.25em] text-gray-400 uppercase mt-2">LET US HELP YOU GET STARTED TODAY</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="bg-[#111] text-center py-4 text-[11px] text-gray-500">
+  J.D. James Construction. 2014. All Rights Reserved. Custom website designed by MilenTechnologies.com.
+  <a href="#" class="text-gray-400 underline ml-1">Sitemap</a>.
+</footer>
 
 </body>
 </html>
