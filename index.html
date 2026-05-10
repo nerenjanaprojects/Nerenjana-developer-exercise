@@ -40,8 +40,8 @@
   <div class="w-[45px] h-[50px] bg-[#5e656b] flex items-center justify-center cursor-pointer">
     <img src="images/infoI.svg" class="w-[9px] h-[27px]">
   </div>
-  <div class="w-[145px] h-[53px] bg-[#af3315] flex items-center justify-center cursor-pointer">
-    <span class="text-xs font-bold tracking-[0.2em]" style="font-family: 'Rajdhani', sans-serif; font-weight: 100; font-size: 21.28px;">CONTACT</span>
+  <div class="w-[145px] h-[53px] bg-[#af3315] flex items-center justify-center cursor-pointer gap-2">
+    <span class="text-xs font-bold" style="font-family: 'Rajdhani', sans-serif; font-weight: 100; font-size: 21.28px;">CONTACT</span>
     <img src="images/mailIcon.svg" class="w-[24px] h-[20px]">
   </div>
   <div class="h-4"></div>
@@ -111,7 +111,7 @@
   <div class="relative z-10 max-w-5xl mx-auto">
 
     <!-- Heading -->
-    <div class="flex items-center justify-end mb-10">
+    <div class="flex mb-10 ml-56">
 
       <h2
         class="uppercase pr-8"
@@ -120,7 +120,7 @@
         PROJECTS
       </h2>
 
-      <div class="w-[1px] h-[120px] bg-[#51606d]"></div>
+      <div class="w-[1px] h-[90px] bg-[#ffffff]"></div>
 
       <div class="pl-8 leading-none">
 
@@ -132,12 +132,12 @@
 
         <p
           class="uppercase"
-          style="font-family:'Bebas Neue'; font-size:56.87px;"
+          style="font-family:'Bebas Neue'; font-size:54px;"
         >
           MEDFORD & SOUTH JERSEY
         </p>
 
-        <div class="flex items-start gap-2 mt-1">
+        <div class="flex items-start gap-2">
 
           <p
             style="font-family:'Rajdhani'; font-size:13.96px; color:#ffffff;"
@@ -157,23 +157,54 @@
 
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1">
-      <!-- Info card -->
-      <div class="bg-brand-dark p-4">
-        <p class="font-bold text-xs leading-snug mb-2">black and pewter gray paver sidewalk</p>
-        <p class="text-[11px] text-orange-200 leading-relaxed">
-          Brick paver sidewalk ● Brick paver border ● Sealed brick pavers ● Marlton brick pavers ● EP Henry pavers
-        </p>
-        <a href="#" class="text-[11px] underline text-orange-300 mt-2 block">view</a>
-      </div>
-      <img src="images/sidewalk2.jpg" class="w-full h-44 object-cover" loading="lazy">
-      <img src="images/sidewalk3.jpg" class="w-full h-44 object-cover" loading="lazy">
-      <img src="images/sidewalk4.jpg" class="w-full h-44 object-cover" loading="lazy">
+    <!-- Projects Grid -->
+<div class="flex flex-wrap gap-[16px] mt-6 justify-center">
 
-      <img src="images/sidewalk5.jpg" class="w-full h-44 object-cover" loading="lazy">
-      <img src="images/sidewalk6.jpg" class="w-full h-44 object-cover" loading="lazy">
-      <img src="images/sidewalk7.jpg" class="w-full h-44 object-cover" loading="lazy">
-      <img src="images/sidewalk8.jpg" class="w-full h-44 object-cover" loading="lazy">
+  <!-- Info Card -->
+<div
+  class="relative w-[216px] h-[216px] overflow-hidden border border-black bg-cover"
+  style="background-image:url('images/sidewalk1.jpg');"
+>
+
+  <!-- Transparent orange overlay -->
+  <div class="absolute inset-0 bg-[#c14a24]/80"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 px-2 pt-2">
+
+    <p class="text-white" style="font-family:'Rajdhani'; font-size:20px ;font-weight: 500;" >
+      black and pewter gray<br>
+      paver sidewalk
+    </p>
+
+    <p
+      class="text-[#ffe6db]"
+      style="font-family:'Rajdhani'; font-size:16px;"
+    >
+      Brick paver sidewalk ● Brick<br>
+      paver border ● Sealed brick<br>
+      pavers ● Marlton brick pavers<br>
+      ● EP Henry pavers
+    </p>
+
+    <a
+  href="#"
+  class="absolute left-1/2 -translate-x-1/2 underline text-white"
+  style="font-family:'Rajdhani'; font-size:16px;"
+>
+  view
+</a>
+
+  </div>  
+
+</div>
+      <img src="images/sidewalk2.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk5.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk3.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk4.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk7.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk6.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
+      <img src="images/sidewalk8.jpg" class="w-[215px] h-[215px] object-cover" loading="lazy">
     </div>
 
   </div>
@@ -274,9 +305,8 @@
 </section>
 
 <!-- ══════════ FOOTER ══════════ -->
-<footer class="bg-[#111] text-center py-4 text-[11px] text-gray-500">
-  J.D. James Construction. 2014. All Rights Reserved. Custom website designed by MilenTechnologies.com.
-  <a href="#" class="text-gray-400 underline ml-1">Sitemap</a>.
+<footer class="bg-[#111] text-center py-4 text-[11px] text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 11px;">
+  J.D. James Construction. 2014. All Rights Reserved. Custom website designed by MilesTechnologies.com. Sitemap.
 </footer>
 
 </body>
