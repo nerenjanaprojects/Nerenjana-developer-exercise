@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,34 +30,63 @@
 <body class="relative bg-site-dark text-white font-sans m-0 p-0">
 
 <!-- ══════════ FIXED LEFT SIDEBAR ══════════ -->
+<style>
+  .sidebar-btn {
+    display: flex;
+    align-items: center;
+    width: 45px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .sidebar-btn:hover { width: 145px; }
+  .sidebar-btn .sb-icon { flex-shrink: 0; width: 45px; display: flex; align-items: center; justify-content: center; }
+  .sidebar-btn .sb-label {
+    opacity: 0;
+    transition: opacity 0.2s ease 0.1s;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    padding-right: 10px;
+  }
+  .sidebar-btn:hover .sb-label { opacity: 1; }
+</style>
 <div class="hidden md:flex absolute left-0 top-0 z-50 flex-col gap-1 pt-52">
-  <div class="w-[45px] h-[50px] bg-[#5e656b] flex items-center justify-center cursor-pointer">
-    <img src="images/houseIcon.svg" class="w-[29px] h-[25px]">
-  </div>
-  <div class="w-[45px] h-[49px] bg-[#5e656b] flex items-center justify-center cursor-pointer">
-    <img src="images/starIcon.svg" class="w-[27px] h-[27px]">
-  </div>
-  <div class="w-[45px] h-[50px] bg-[#5e656b] flex items-center justify-center cursor-pointer">
-    <img src="images/infoI.svg" class="w-[9px] h-[27px]">
-  </div>
-  <div class="w-[145px] h-[53px] bg-[#af3315] flex items-center justify-center cursor-pointer gap-2">
-    <span class="text-xs font-bold" style="font-family: 'Rajdhani', sans-serif; font-weight: 100; font-size: 21.28px;">CONTACT</span>
-    <img src="images/mailIcon.svg" class="w-[24px] h-[20px]">
-  </div>
+  <a href="#home" class="sidebar-btn h-[50px] bg-[#5e656b]">
+    <div class="sb-icon"><img src="images/houseIcon.svg" class="w-[29px] h-[25px]"></div>
+    <span class="sb-label">HOME</span>
+  </a>
+  <a href="#projects" class="sidebar-btn h-[49px] bg-[#5e656b]">
+    <div class="sb-icon"><img src="images/starIcon.svg" class="w-[27px] h-[27px]"></div>
+    <span class="sb-label">PROJECTS</span>
+  </a>
+  <a href="#about" class="sidebar-btn h-[50px] bg-[#5e656b]">
+    <div class="sb-icon"><img src="images/infoI.svg" class="w-[9px] h-[27px]"></div>
+    <span class="sb-label">ABOUT</span>
+  </a>
+  <a href="#contact" class="sidebar-btn h-[53px] bg-[#af3315]">
+    <div class="sb-icon"><img src="images/mailIcon.svg" class="w-[24px] h-[20px]"></div>
+    <span class="sb-label">CONTACT</span>
+  </a>
   <div class="h-4"></div>
-  <div class="w-[45px] h-[43px] bg-[#3b5998] flex items-center justify-center cursor-pointer">
-    <img src="images/facebookF.svg" class="w-3">
+  <div class="sidebar-btn h-[43px] bg-[#3b5998]">
+    <div class="sb-icon"><img src="images/facebookF.svg" class="w-3"></div>
+    <span class="sb-label">FACEBOOK</span>
   </div>
-  <div class="w-[45px] h-[43px] bg-[#1da1f2] flex items-center justify-center cursor-pointer">
-    <img src="images/twitterLogo.svg" class="w-6">
+  <div class="sidebar-btn h-[43px] bg-[#1da1f2]">
+    <div class="sb-icon"><img src="images/twitterLogo.svg" class="w-6"></div>
+    <span class="sb-label">TWITTER</span>
   </div>
-  <div class="w-[45px] h-[43px] bg-[#dd4b39] flex items-center justify-center cursor-pointer">
-    <img src="images/googlePlus.svg" class="w-[33px] h-[33px]">
+  <div class="sidebar-btn h-[43px] bg-[#dd4b39]">
+    <div class="sb-icon"><img src="images/googlePlus.svg" class="w-[33px] h-[33px]"></div>
+    <span class="sb-label">GOOGLE+</span>
   </div>
 </div>
 
 <!-- ══════════ HERO ══════════ -->
-<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center"
+<section id="home" class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center"
   style="background-image: url('images/constructBg.jpg');">
   <div class="absolute inset-0 bg-black/62"></div>
   <img src="images/redTriangle.svg" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 z-10">
@@ -100,7 +129,7 @@
 </section>
 
 <!-- ══════════ PROJECTS ══════════ -->
-<section class="relative bg-site-mid py-16 px-4 md:px-10 overflow-hidden">
+<section id="projects" class="relative bg-site-mid py-16 px-4 md:px-10 overflow-hidden">
 
   <!-- Star Background -->
   <img
@@ -211,14 +240,12 @@
 </section>
 
 <!-- ══════════ ABOUT ══════════ -->
-<section
-  class="relative overflow-hidden bg-cover bg-center py-20"
+<section id="about"
+  class="relative overflow-visible bg-cover bg-center py-20 pb-40 z-20"
   style="background-image:url('images/grittyBg.jpg');"
 >
-  <!-- overlay -->
-  <div class="absolute inset-0"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-start px-6">
+  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-start px-2">
 
     <!-- LEFT SIDE -->
     <div class="w-full md:w-[320px] flex-shrink-0">
@@ -234,43 +261,17 @@
           loading="lazy"
         >
       </div>
-
-      <!-- phone -->
-      <div class="mt-6 text-center">
-
-        <p
-          class="uppercase text-white"
-          style="font-family:'Rajdhani'; font-size:17.8px;font-family: 500;"
-        >
-          CALL US FOR A QUOTE
-        </p>
-
-        <p
-          class="leading-none text-brand"
-          style="font-family:'Bebas Neue'; font-size:57.61px;"
-        >
-          609.864.3888
-        </p>
-
-        <p
-          class="uppercase text-white"
-          style="font-family:'Rajdhani'; font-size:17.8px;"
-        >
-          START YOUR NEXT PROJECT TODAY
-        </p>
-
-      </div>
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="flex-1 md:pl-16 mt-14 md:mt-0">
+    <div class="flex-1">
 
       <!-- top row -->
-      <div class="flex flex-col md:flex-row items-start gap-8">
+      <div class="flex flex-col md:flex-row items-start gap-8 ml-16">
 
         <!-- ABOUT title -->
         <h2
-          class="text-[#d75234]"
+          class="text-[#d75234] leading-none"
           style="font-family:'Bebas Neue'; font-size:87.39px;"
         >
           ABOUT
@@ -294,7 +295,7 @@
       </div>
 
       <!-- SERVICES -->
-      <div class="mt-14 md:ml-[185px]">
+      <div class="mt-14 md:ml-[285px]">
 
         <h3
           class="uppercase text-[#d75234] mb-6"
@@ -355,51 +356,54 @@
 
         </div>
 
-        <!-- DIFFERENCE -->
-        <div class="mt-12">
+      </div>
 
-          <h3
-            class="uppercase text-[#d75234] mb-5"
-            style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
-          >
-            WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?
-          </h3>
+      <!-- DIFFERENCE -->
+      <div class="mt-12 flex items-start gap-8">
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-15 gap-y-2">
-
-            <p class="text-white text-[15px] font-[Rajdhani]">
-              prompt courteous reliable service
-            </p>
-
-            <p class="text-white text-[15px] font-[Rajdhani]">
-              restoration and repair services
-            </p>
-
-            <p class="text-white text-[15px] font-[Rajdhani]">
-              reasonable prices
-            </p>
-
-            <p class="text-white text-[15px] font-[Rajdhani]">
-              personalized service to meet your needs
-            </p>
-
-            <p class="text-white text-[15px] font-[Rajdhani]">
-              no project too big or small
-            </p>
-
+        <!-- phone -->
+        <div class="flex items-stretch gap-4 flex-shrink-0">
+      
+          <div>
+            <p class="uppercase text-white" style="font-family:'Rajdhani'; font-size:17.8px;">CALL US FOR A QUOTE</p>
+            <p class="leading-none text-brand" style="font-family:'Bebas Neue'; font-size:57.61px;">609.864.3888</p>
+            <p class="uppercase text-white" style="font-family:'Rajdhani'; font-size:17.8px;">START YOUR NEXT PROJECT TODAY</p>
           </div>
-
+           <div class="w-[1px] bg-white/50 self-stretch"></div>
         </div>
 
+        <div>
+        <h3
+          class="uppercase text-[#d75234] mb-5"
+          style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
+        >
+          WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-15 gap-y-2">
+          <p class="text-white text-[15px] font-[Rajdhani]">prompt courteous reliable service</p>
+          <p class="text-white text-[15px] font-[Rajdhani]">restoration and repair services</p>
+          <p class="text-white text-[15px] font-[Rajdhani]">reasonable prices</p>
+          <p class="text-white text-[15px] font-[Rajdhani]">personalized service to meet your needs</p>
+          <p class="text-white text-[15px] font-[Rajdhani]">no project too big or small</p>
+        </div>
+        </div>
       </div>
 
     </div>
 
+    </div>
+
   </div>
+  <!-- rough curved bottom edge -->
+  <img
+    src="images/roughEdge.png"
+    alt=""
+    class="absolute -bottom-12 left-0 w-full z-30 pointer-events-none"
+  />
 </section>
 
 <!-- ══════════ CONTACT ══════════ -->
-<section class="py-14 px-4 md:px-10 bg-cover bg-center" style="background-image: url('images/mapBg.jpg');">
+<section id="contact" class="py-14 px-4 md:px-10 bg-cover bg-center" style="background-image: url('images/mapBg.jpg');">
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
 
     <!-- Form -->
