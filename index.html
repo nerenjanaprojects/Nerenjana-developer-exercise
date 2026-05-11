@@ -7,85 +7,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <title>J.D. James Construction</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: '#e8622a',
-          'brand-dark': '#af3315',
-          'site-dark': '#1a2530',
-          'site-mid': '#1e2b35',
-          'sidebar-gray': '#5e656b',
-        },
-        letterSpacing: {
-          widest2: '0.3em',
-          widest3: '0.4em',
-        }
-      }
-    }
-  }
-</script>
+<script src="js/tailwind.config.js"></script>
 </head>
 <body class="relative bg-site-dark text-white font-sans m-0 p-0">
 
-<!-- ══════════ FIXED LEFT SIDEBAR ══════════ -->
-<style>
-  .sidebar-btn {
-    display: flex;
-    align-items: center;
-    width: 45px;
-    overflow: hidden;
-    transition: width 0.3s ease;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .sidebar-btn:hover { width: 145px; }
-  .sidebar-btn .sb-icon { flex-shrink: 0; width: 45px; display: flex; align-items: center; justify-content: center; }
-  .sidebar-btn .sb-label {
-    opacity: 0;
-    transition: opacity 0.2s ease 0.1s;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    padding-right: 10px;
-  }
-  .sidebar-btn:hover .sb-label { opacity: 1; }
-</style>
+<!--SIDEBAR -->
 <div class="hidden md:flex absolute left-0 top-0 z-50 flex-col gap-1 pt-52">
-  <a href="#home" class="sidebar-btn h-[50px] bg-[#5e656b]">
-    <div class="sb-icon"><img src="images/houseIcon.svg" class="w-[29px] h-[25px]"></div>
-    <span class="sb-label">HOME</span>
+  <a href="#home" class="group flex items-center w-[45px] hover:w-[145px] h-[50px] bg-[#5e656b] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/houseIcon.svg" class="w-[29px] h-[25px]">
+    </div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">HOME</span>
   </a>
-  <a href="#projects" class="sidebar-btn h-[49px] bg-[#5e656b]">
-    <div class="sb-icon"><img src="images/starIcon.svg" class="w-[27px] h-[27px]"></div>
-    <span class="sb-label">PROJECTS</span>
+  <a href="#projects" class="group flex items-center w-[45px] hover:w-[145px] h-[49px] bg-[#5e656b] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/starIcon.svg" class="w-[27px] h-[27px]"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">PROJECTS</span>
   </a>
-  <a href="#about" class="sidebar-btn h-[50px] bg-[#5e656b]">
-    <div class="sb-icon"><img src="images/infoI.svg" class="w-[9px] h-[27px]"></div>
-    <span class="sb-label">ABOUT</span>
+  <a href="#about" class="group flex items-center w-[45px] hover:w-[145px] h-[50px] bg-[#5e656b] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/infoI.svg" class="w-[9px] h-[27px]"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">ABOUT</span>
   </a>
-  <a href="#contact" class="sidebar-btn h-[53px] bg-[#af3315]">
-    <div class="sb-icon"><img src="images/mailIcon.svg" class="w-[24px] h-[20px]"></div>
-    <span class="sb-label">CONTACT</span>
+  <a href="#contact" class="group flex items-center w-[45px] hover:w-[145px] h-[53px] bg-[#af3315] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/mailIcon.svg" class="w-[24px] h-[20px]"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">CONTACT</span>
   </a>
   <div class="h-4"></div>
-  <div class="sidebar-btn h-[43px] bg-[#3b5998]">
-    <div class="sb-icon"><img src="images/facebookF.svg" class="w-3"></div>
-    <span class="sb-label">FACEBOOK</span>
+  <div class="group flex items-center w-[45px] hover:w-[145px] h-[43px] bg-[#3b5998] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/facebookF.svg" class="w-3"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">FACEBOOK</span>
   </div>
-  <div class="sidebar-btn h-[43px] bg-[#1da1f2]">
-    <div class="sb-icon"><img src="images/twitterLogo.svg" class="w-6"></div>
-    <span class="sb-label">TWITTER</span>
+  <div class="group flex items-center w-[45px] hover:w-[145px] h-[43px] bg-[#1da1f2] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/twitterLogo.svg" class="w-6"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">TWITTER</span>
   </div>
-  <div class="sidebar-btn h-[43px] bg-[#dd4b39]">
-    <div class="sb-icon"><img src="images/googlePlus.svg" class="w-[33px] h-[33px]"></div>
-    <span class="sb-label">GOOGLE+</span>
+  <div class="group flex items-center w-[45px] hover:w-[145px] h-[43px] bg-[#dd4b39] overflow-hidden transition-[width] duration-300 ease-in-out cursor-pointer whitespace-nowrap">
+    <div class="shrink-0 w-[45px] flex items-center justify-center">
+      <img src="images/googlePlus.svg" class="w-[33px] h-[33px]"></div>
+    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 font-[Rajdhani] text-[18px] font-semibold text-white pr-[10px]">GOOGLE+</span>
   </div>
 </div>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- HERO section -->
 <section id="home" class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center"
   style="background-image: url('images/constructBg.jpg');">
   <div class="absolute inset-0 bg-black/62"></div>
@@ -102,7 +69,7 @@
   </div>
 </section>
 
-<!-- ══════════ QUOTE ══════════ -->
+<!-- QUOTE section-->
 <section class="relative bg-[#af3315] h-[238px] overflow-hidden">
   <span class="absolute left-[165px] top-[-75px] text-[#872007] leading-none opacity-80 select-none"
     style="font-family: 'Bebas Neue'; font-size: 415.83px;" > " </span>
@@ -115,7 +82,6 @@
       WE NEVER COMPROMISE ON QUALITY.
     </h2>
 
-    <!-- JD James -->
     <div class="w-[755px] flex justify-end mt-2">
       <p style="font-family: 'Rajdhani'; font-weight: 100; font-size: 30px;" > – JD JAMES
       </p>
@@ -128,24 +94,16 @@
 
 </section>
 
-<!-- ══════════ PROJECTS ══════════ -->
+<!-- PROJECTS -->
 <section id="projects" class="relative bg-site-mid py-16 px-4 md:px-10 overflow-hidden">
 
-  <!-- Star Background -->
-  <img
-    src="images/starBg.jpg"
-    class="absolute left-1/2 top-[-300px] -translate-x-1/2 opacity-30 w-[520px] z-0 mix-blend-multiply"
-  >
+  <img src="images/starBg.jpg"
+    class="absolute left-1/2 top-[-300px] -translate-x-1/2 opacity-30 w-[520px] z-0 mix-blend-multiply" >
 
   <div class="relative z-10 max-w-5xl mx-auto">
-
-    <!-- Heading -->
     <div class="flex mb-10 ml-56">
 
-      <h2
-        class="uppercase pr-8"
-        style="font-family:'Bebas Neue'; font-size:87.39px; color:#e25533;"
-      >
+      <h2 class="uppercase pr-8" style="font-family:'Bebas Neue'; font-size:87.39px; color:#e25533;" >
         PROJECTS
       </h2>
 
@@ -153,52 +111,33 @@
 
       <div class="pl-8 leading-none">
 
-        <p
-          style="font-family:'Rajdhani'; font-size:20.52px; color:#ffffff;"
-        >
-          SERVING
-        </p>
+        <p style="font-family:'Rajdhani'; font-size:20.52px; color:#ffffff;" > SERVING </p>
 
-        <p
-          class="uppercase"
-          style="font-family:'Bebas Neue'; font-size:54px;"
-        >
+        <p class="uppercase" style="font-family:'Bebas Neue'; font-size:54px;" >
           MEDFORD & SOUTH JERSEY
         </p>
 
         <div class="flex items-start gap-2">
 
-          <p
-            style="font-family:'Rajdhani'; font-size:13.96px; color:#ffffff;"
-          >
+          <p style="font-family:'Rajdhani'; font-size:13.96px; color:#ffffff;" >
             FOR <br> OVER
           </p>
 
-          <p
-            style="font-family:'Bebas Neue'; font-size:56.53px;"
-          >
+          <p style="font-family:'Bebas Neue'; font-size:56.53px;"  >
             25 YEARS
           </p>
 
         </div>
-
       </div>
-
     </div>
 
-    <!-- Projects Grid -->
+    <!-- Grid -->
 <div class="flex flex-wrap gap-[16px] mt-6 justify-center">
+<div class="relative w-[216px] h-[216px] overflow-hidden border border-black bg-cover"
+  style="background-image:url('images/sidewalk1.jpg');" >
 
-  <!-- Info Card -->
-<div
-  class="relative w-[216px] h-[216px] overflow-hidden border border-black bg-cover"
-  style="background-image:url('images/sidewalk1.jpg');"
->
-
-  <!-- Transparent orange overlay -->
   <div class="absolute inset-0 bg-[#c14a24]/80"></div>
 
-  <!-- Content -->
   <div class="relative z-10 px-2 pt-2">
 
     <p class="text-white" style="font-family:'Rajdhani'; font-size:20px ;font-weight: 500;" >
@@ -206,23 +145,15 @@
       paver sidewalk
     </p>
 
-    <p
-      class="text-[#ffe6db]"
-      style="font-family:'Rajdhani'; font-size:16px;"
-    >
+    <p class="text-[#ffe6db]" style="font-family:'Rajdhani'; font-size:16px;" >
       Brick paver sidewalk ● Brick<br>
       paver border ● Sealed brick<br>
       pavers ● Marlton brick pavers<br>
       ● EP Henry pavers
     </p>
 
-    <a
-  href="#"
-  class="absolute left-1/2 -translate-x-1/2 underline text-white"
-  style="font-family:'Rajdhani'; font-size:16px;"
->
-  view
-</a>
+    <a href="#" class="absolute left-1/2 -translate-x-1/2 underline text-white"
+  style="font-family:'Rajdhani'; font-size:16px;" > view </a>
 
   </div>  
 
@@ -239,11 +170,10 @@
   </div>
 </section>
 
-<!-- ══════════ ABOUT ══════════ -->
+<!-- ABOUT -->
 <section id="about"
   class="relative overflow-visible bg-cover bg-center py-20 pb-40 z-20"
-  style="background-image:url('images/grittyBg.jpg');"
->
+  style="background-image:url('images/grittyBg.jpg');" >
 
   <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-start px-2">
 
@@ -251,40 +181,23 @@
     <div class="w-full md:w-[320px] flex-shrink-0">
 
       <!-- angled image -->
-      <div
-        class="overflow-hidden"
-        style="clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);"
-      >
-        <img
-          src="images/owner.png"
-          class="w-full object-cover"
-          loading="lazy"
-        >
+      <div class="overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);" >
+        <img src="images/owner.png" class="w-full object-cover" loading="lazy" >
       </div>
     </div>
 
     <!-- RIGHT SIDE -->
     <div class="flex-1">
 
-      <!-- top row -->
       <div class="flex flex-col md:flex-row items-start gap-8 ml-16">
 
-        <!-- ABOUT title -->
-        <h2
-          class="text-[#d75234] leading-none"
-          style="font-family:'Bebas Neue'; font-size:87.39px;"
-        >
-          ABOUT
-        </h2>
+        <h2 class="text-[#d75234] leading-none" style="font-family:'Bebas Neue'; font-size:87.39px;" > ABOUT </h2>
 
         <!-- divider -->
         <div class="hidden md:block w-[1px] self-stretch bg-white/50"></div>
 
-        <!-- intro text -->
-        <p
-          class="text-white leading-relaxed max-w-[620px]"
-          style="font-family:'Rajdhani'; font-size:15px;"
-        >
+        <!-- intro -->
+        <p class="text-white leading-relaxed max-w-[620px]" style="font-family:'Rajdhani'; font-size:15px;" >
           A premier provider of concrete services for the entire Medford and South
           Jersey area. Dedicated to customer satisfaction from start to finish as
           well as quality workmanship at reasonable prices. Preforming concrete
@@ -297,10 +210,7 @@
       <!-- SERVICES -->
       <div class="mt-14 md:ml-[285px]">
 
-        <h3
-          class="uppercase text-[#d75234] mb-6"
-          style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
-        >
+        <h3 class="uppercase text-[#d75234] mb-6" style="font-family:'Rajdhani'; font-size:23px; font-weight:600;" >
           SERVICES INCLUDE:
         </h3>
 
@@ -361,7 +271,7 @@
       <!-- DIFFERENCE -->
       <div class="mt-12 flex items-start gap-8">
 
-        <!-- phone -->
+        <!-- mobile -->
         <div class="flex items-stretch gap-4 flex-shrink-0">
       
           <div>
@@ -373,10 +283,7 @@
         </div>
 
         <div>
-        <h3
-          class="uppercase text-[#d75234] mb-5"
-          style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
-        >
+        <h3 class="uppercase text-[#d75234] mb-5" style="font-family:'Rajdhani'; font-size:23px; font-weight:600;" >
           WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-15 gap-y-2">
@@ -394,7 +301,7 @@
     </div>
 
   </div>
-  <!-- rough curved bottom edge -->
+  <!-- rough edge -->
   <img
     src="images/roughEdge.png"
     alt=""
@@ -402,7 +309,7 @@
   />
 </section>
 
-<!-- ══════════ CONTACT ══════════ -->
+<!-- CONTACT -->
 <section id="contact" class="py-14 px-4 md:px-10 bg-cover bg-center" style="background-image: url('images/mapBg.jpg');">
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
 
@@ -434,7 +341,7 @@
       </div>
     </div>
 
-    <!-- Map info -->
+    <!-- Map -->
     <div class="flex-1 flex flex-col items-center justify-center text-center pt-10">
       <p class="text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 17.8px;">J.D. JAMES CONSTRUCTION</p>
       <p class="text-white uppercase" style="font-family: 'Rajdhani', sans-serif; font-size: 17.8px;">MEDFORD N.J. 08055</p>
@@ -446,7 +353,7 @@
   </div>
 </section>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- FOOTER -->
 <footer class="bg-[#111] text-center py-4 text-[11px] text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 11px;">
   J.D. James Construction. 2014. All Rights Reserved. Custom website designed by MilesTechnologies.com. Sitemap.
 </footer>
