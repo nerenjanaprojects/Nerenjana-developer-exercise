@@ -211,50 +211,188 @@
 </section>
 
 <!-- ══════════ ABOUT ══════════ -->
-<section class="py-14 px-4 md:px-10 bg-cover bg-center" style="background-image: url('images/grittyBg.jpg');">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+<section
+  class="relative overflow-hidden bg-cover bg-center py-20"
+  style="background-image:url('images/grittyBg.jpg');"
+>
+  <!-- overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
 
-    <!-- Left col -->
-    <div class="w-full md:w-64 md:flex-shrink-0">
-      <img src="images/owner.png" class="w-full object-cover" loading="lazy">
-      <div class="mt-6 text-center md:text-right">
-        <p class="text-[10px] tracking-[0.25em] text-gray-400 uppercase">Call Us For A Quote</p>
-        <p class="text-3xl font-black text-brand">609.864.3888</p>
-        <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">Start Your Next Project Today</p>
+  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-start px-6">
+
+    <!-- LEFT SIDE -->
+    <div class="w-full md:w-[320px] flex-shrink-0">
+
+      <!-- angled image -->
+      <div
+        class="overflow-hidden"
+        style="clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);"
+      >
+        <img
+          src="images/owner.png"
+          class="w-full object-cover"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- phone -->
+      <div class="mt-6 text-center">
+
+        <p
+          class="uppercase text-white"
+          style="font-family:'Rajdhani'; font-size:17.8px;font-family: 500;"
+        >
+          CALL US FOR A QUOTE
+        </p>
+
+        <p
+          class="leading-none text-brand"
+          style="font-family:'Bebas Neue'; font-size:57.61px;"
+        >
+          609.864.3888
+        </p>
+
+        <p
+          class="uppercase text-white"
+          style="font-family:'Rajdhani'; font-size:17.8px;"
+        >
+          START YOUR NEXT PROJECT TODAY
+        </p>
+
       </div>
     </div>
 
-    <!-- Right col -->
-    <div class="flex-1">
-      <h2 class="text-5xl font-black text-brand mb-4">ABOUT</h2>
-      <p class="text-sm text-gray-300 leading-relaxed mb-6">
-        A premier provider of concrete services for the entire Medford and South Jersey area. Dedicated to customer satisfaction from start to finish as well as quality workmanship at reasonable prices. Preforming concrete projects in: Medford, Cherry Hill, Marlton, Haddonfield, Moorestown, Mt. Laurel, Voorhees and surrounding areas.
-      </p>
+    <!-- RIGHT SIDE -->
+    <div class="flex-1 md:pl-16 mt-14 md:mt-0">
 
-      <p class="text-xs font-bold tracking-[0.25em] text-brand uppercase mb-3">SERVICES INCLUDE:</p>
-      <div class="grid grid-cols-2 gap-x-6 gap-y-1 mb-8">
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete driveways</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete steps</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete patios</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete pool decks</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete sidewalks</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">exotic concrete finishes</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete floors</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">hardscaping</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">EP Henry brick pavers</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">power washing</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">EP Henry retaining walls</p>
-        <p class="text-xs text-gray-300 before:content-['★'] before:text-brand before:mr-2">concrete restoration and repairs</p>
+      <!-- top row -->
+      <div class="flex flex-col md:flex-row items-start gap-8">
+
+        <!-- ABOUT title -->
+        <h2
+          class="text-[#d75234]"
+          style="font-family:'Bebas Neue'; font-size:87.39px;"
+        >
+          ABOUT
+        </h2>
+
+        <!-- divider -->
+        <div class="hidden md:block w-[1px] self-stretch bg-white/50"></div>
+
+        <!-- intro text -->
+        <p
+          class="text-white leading-relaxed max-w-[620px]"
+          style="font-family:'Rajdhani'; font-size:15px;"
+        >
+          A premier provider of concrete services for the entire Medford and South
+          Jersey area. Dedicated to customer satisfaction from start to finish as
+          well as quality workmanship at reasonable prices. Preforming concrete
+          projects in: Medford, Cherry Hill, Marlton, Haddonfield, Moorestown,
+          Mt. Laurel, Voorhees and surrounding areas.
+        </p>
+
       </div>
 
-      <p class="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-3">WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?</p>
-      <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-gray-300">
-        <p>prompt courteous reliable service</p>
-        <p>restoration and repair services</p>
-        <p>reasonable prices</p>
-        <p>personalized service to meet your needs</p>
-        <p>no project too big or small</p>
+      <!-- SERVICES -->
+      <div class="mt-14 md:ml-[185px]">
+
+        <h3
+          class="uppercase text-[#d75234] mb-6"
+          style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
+        >
+          SERVICES INCLUDE:
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2">
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete driveways
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete steps
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete patios
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete pool decks
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete sidewalks
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            exotic concrete finishes
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete floors
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            hardscaping
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            EP Henry brick pavers
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            power washing
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            EP Henry retaining walls
+          </p>
+
+          <p class="relative pl-5 text-white text-[20px] font-[Rajdhani] before:content-['★'] before:absolute before:left-0 before:text-brand">
+            concrete restoration and repairs
+          </p>
+
+        </div>
+
+        <!-- DIFFERENCE -->
+        <div class="mt-12">
+
+          <h3
+            class="uppercase text-[#d75234] mb-5"
+            style="font-family:'Rajdhani'; font-size:23px; font-weight:600;"
+          >
+            WHAT MAKES US DIFFERENT FROM OUR COMPETITORS?
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-15 gap-y-2">
+
+            <p class="text-white text-[15px] font-[Rajdhani]">
+              prompt courteous reliable service
+            </p>
+
+            <p class="text-white text-[15px] font-[Rajdhani]">
+              restoration and repair services
+            </p>
+
+            <p class="text-white text-[15px] font-[Rajdhani]">
+              reasonable prices
+            </p>
+
+            <p class="text-white text-[15px] font-[Rajdhani]">
+              personalized service to meet your needs
+            </p>
+
+            <p class="text-white text-[15px] font-[Rajdhani]">
+              no project too big or small
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </div>
 
   </div>
@@ -266,26 +404,26 @@
 
     <!-- Form -->
     <div class="w-full md:w-80 md:flex-shrink-0">
-      <h2 class="text-3xl font-black uppercase mb-6">CONTACT US</h2>
+      <h2 class="text-white ml-20" style="font-family: 'Bebas Neue', sans-serif; font-size: 57.61px;">CONTACT US</h2>
       <div class="flex flex-col gap-3">
-        <div class="flex items-center gap-3">
-          <label class="w-16 text-right text-xs text-gray-400">name</label>
-          <input type="text" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
+        <div class="flex items-center gap-2">
+          <label class="w-16 text-right text-xs text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 18px;font-weight:500;">name</label>
+          <input type="text" class="flex-1 bg-white text-white text-xs px-2 py-2 outline-none">
         </div>
-        <div class="flex items-center gap-3">
-          <label class="w-16 text-right text-xs text-gray-400">email</label>
-          <input type="email" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
+        <div class="flex items-center gap-2">
+          <label class="w-16 text-right text-xs text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 18px;font-weight:500;">email</label>
+          <input type="email" class="flex-1 bg-white text-white text-xs px-2 py-2 outline-none">
         </div>
-        <div class="flex items-center gap-3">
-          <label class="w-16 text-right text-xs text-gray-400">phone</label>
-          <input type="tel" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none">
+        <div class="flex items-center gap-2">
+          <label class="w-16 text-right text-xs text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 18px;font-weight:500;">phone</label>
+          <input type="tel" class="flex-1 bg-white text-white text-xs px-2 py-2 outline-none">
         </div>
-        <div class="flex items-start gap-3">
-          <label class="w-16 text-right text-xs text-gray-400 pt-2">message</label>
-          <textarea rows="5" class="flex-1 bg-site-dark border border-[#3a4a58] text-white text-xs px-2 py-2 outline-none resize-none"></textarea>
+        <div class="flex items-start gap-2">
+          <label class="w-16 text-right text-xs text-white pt-2" style="font-family: 'Rajdhani', sans-serif; font-size: 18px;font-weight:500;">message</label>
+          <textarea rows="5" class="flex-1 bg-white text-white text-xs px-2 py-2 outline-none resize-none"></textarea>
         </div>
-        <div class="pl-[76px]">
-          <button class="bg-brand-dark text-white text-xs font-bold tracking-[0.25em] px-8 py-3 hover:bg-brand transition-colors">
+        <div class="pl-[76px] flex justify-center">
+          <button class="bg-[#ce4f32] border border-white text-[25px] font-[Rajdhani] font-bold w-[90px] h-[52px] hover:bg-brand transition-colors">
             SEND
           </button>
         </div>
@@ -294,11 +432,11 @@
 
     <!-- Map info -->
     <div class="flex-1 flex flex-col items-center justify-center text-center pt-10">
-      <p class="text-sm font-bold tracking-[0.25em] uppercase">J.D. JAMES CONSTRUCTION</p>
-      <p class="text-xs text-gray-400 tracking-[0.2em] uppercase mt-1">MEDFORD N.J. 08055</p>
-      <img src="images/mapPin.svg" class="w-10 h-12 my-5">
-      <p class="text-5xl font-black text-brand">609.864.3888</p>
-      <p class="text-[10px] tracking-[0.25em] text-gray-400 uppercase mt-2">LET US HELP YOU GET STARTED TODAY</p>
+      <p class="text-white" style="font-family: 'Rajdhani', sans-serif; font-size: 17.8px;">J.D. JAMES CONSTRUCTION</p>
+      <p class="text-white uppercase" style="font-family: 'Rajdhani', sans-serif; font-size: 17.8px;">MEDFORD N.J. 08055</p>
+      <img src="images/mapPin.svg" class="w-10 h-12 my-3">
+      <p class="text-white" style="font-family: 'Bebas Neue', sans-serif; font-size: 87px;">609.864.3888</p>
+      <p class="text-white uppercase" style="font-family: 'Rajdhani', sans-serif; font-size: 17.8px;">LET US HELP YOU GET STARTED TODAY</p>
     </div>
 
   </div>
